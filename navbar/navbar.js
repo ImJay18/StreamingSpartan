@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch("./navbar/navbar.html") // Solicita el archivo navbar.html
+    fetch(".navbar/navbar.html") // Solicita el archivo navbar.html
         .then(response => response.text()) // Convierte la respuesta a texto
         .then(data => {
             let navbar = document.querySelector(".container"); // Busca por clase
