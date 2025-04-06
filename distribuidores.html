@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streaming Spartan</title>
+    <link rel="icon" href="Imagenes/Spartan logo with cat.png"> <!-- Asignar icono al title de la pagina "texto en pestaña" -->
+    <link rel="stylesheet" href="Style - SP/Styles-Base.css">
+    <!-- <script src="script/myscripts.js"></script> -->
+    <script src="script/scripts-show-hide.js" defer></script> <!-- Llama al .js que contiene las funciones de ocultar y mostrar contenido -->
+    <script src="/navbar/navbar.js" defer></script>
+<body>
+    <header>
+        <div class="container"></div>
+    </header>
+
+    <section id="ser-distribuidor">
+        <div class="container">
+            <div class="fondo-container-ser">
+                <div><img src="Imagenes/Spartan logo with cat.png" alt="" class="logoCat"></div>
+                <div class="texto-ser-distribuidor">
+                    <h2>📢 Conviértete en Distribuidor de Streaming Spartan 🚀</h2>
+                    <p class="texto">
+                        ¿Te gustaría generar ingresos vendiendo accesos a plataformas digitales? 💰 En Streaming Spartan, te ofrecemos la oportunidad de ser revendedor y empezar tu propio negocio vendiendo suscripciones a servicios de streaming. <br>
+                        
+                        <br><span class="sub-titulos">✅ ¿Qué es un distribuidor?</span><br>
+                        <br>Un distribuidor es una persona que compra accesos a nuestras plataformas a precios exclusivos y los revende con ganancias. Nosotros te proporcionamos los accesos y soporte, ¡tú solo te encargas de vender!<br>
+                        
+                        <br><span class="sub-titulos">Beneficios de ser revendedor en Streaming Spartan:</span><br>
+                        <br>✔️ Accesos a plataformas populares a precios preferenciales.
+                        <br>✔️ Ganancias por cada venta realizada.
+                        <br>✔️ Soporte y asesoría para que puedas vender fácilmente.
+                        <br>✔️ Posibilidad de escalar tu negocio y aumentar tus ingresos.<br>
+
+                        <br><span class="sub-titulos">💼 ¿Cómo empezar?</span><br>
+                        <br>➡️ Dar clic en "Registrarse como distribuidor" y diligenciar el formulario.
+                    </p>
+                    <button class="boton-registro-form" onclick="show()">Registrarse como distribuidor</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <section id="contenedor-principal-formulario-registro">
+        <div class="contenedor-formulario-registro">
+            <h2>🔱 Registrate hoy! 🔱</h2>
+            <div class="contenedor-formulario-inputs">
+                <form onsubmit="send(event)">
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+                    <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos" required>
+                    <input type="mail" name="correo" id="correo" placeholder="Correo" required>
+                    <input type="tel" name="telefono" id="telefono" placeholder="Telefono de contacto" required>
+                    <select name="pais" id="pais" required>
+                        <option value="" selected disabled>Selecciona tu país</option>
+                        <option value="Col">Colombia</option>
+                        <option value="Br">Brasil</option>
+                        <option value="Pr">Perú</option>
+                        <option value="Mex">Mexico</option>
+                        <option value="CR">Costa Rica</option>
+                    </select>
+
+                    <select name="ciudad" id="ciudad">
+                        <option value="" selected disabled>Selecciona tu ciudad</option>
+                        <option value="1">Cartagena</option>
+                        <option value="2">Barranquilla</option>
+                        <option value="3">Santa Marta</option>
+                        <option value="4">Monteria</option>
+                        <option value="5">Medellin</option>
+                    </select>
+                </form>
+                <div class="buttonform">
+                    <button class="buttonform-c" type="submit" onclick="enviarFormulario()">Enviar</button>
+                </div>
+            </div>
+        </div>
+        <p class="TextoDeEnvio" style="display: none">Información enviada</p> <!-- Falta agregar css -->
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <p>Design by: <span class="animated-text">Mr. Greek</span></p>
+            <p>&copy; Copyright: Streaming Spartan 2025</p>
+        </div>
+    </footer>
+
+    <a href="https://api.whatsapp.com/send?phone=573207685459&text=%20¡Hola!%20Quisiera%20información%20sobre%20las%20plataformas%20de%20streaming%20disponibles.%20¿Podrías%20darme%20más%20detalles? 😊" target="_blank" class="whatsapp-button">
+        <img src="Imagenes/logos/WPP - WHITE.png" alt="WhatsApp" width="40" height="40"></a>  
+
+</body>
+</html>

@@ -1,0 +1,737 @@
+*{
+    box-sizing: border-box;
+}
+
+html{ /* agregar estilo a la pagina en si, escructura general */
+    scroll-behavior: smooth; /* Crea un scroll a la pagina con movimiento suave cuando se linkea un punto de la misma*/
+}
+
+body{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0; /* Con el margin 0 en el logo aseguramos que el cuerpo general de la pagina quede pegado a la parte superior de la pantalla */
+}
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+header{
+    padding: 5px 20px; /* Reduce el padding para disminuir la altura */
+    height: auto; /* Permite que el contenido determine la altura */
+    background: linear-gradient(90deg,
+                rgba(2,0,36,1) 0%,
+                rgba(9,9,121,1) 41%, 
+                rgba(7,50,148,1) 56%, 
+                rgba(201,0,255,1) 100%);
+    z-index: 1000;
+}
+
+header .logo{
+    padding: 10px 30px;
+    margin: 0;
+    color: white;
+    font-weight: bold;
+    font-size: 1.6em;
+    text-shadow: 2px 2px 10px rgb(0, 0, 0);
+}
+
+header .textlogo{
+    width: 110px;
+    height: auto;
+    padding-bottom: 0px;
+}
+
+header .container{
+    display: flex; /* Aplica estilo flexible al contenedor*/
+    flex-direction: column; /* Dirección tipo columna */
+    align-items: center; /* Alinea los items de manera centrada */
+}
+
+header nav{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding-bottom: 10px;
+    /* text-shadow: 2px 2px 10px black; */
+    font-weight: bold;
+}
+
+header a{
+    font-size: bold;
+    color: white;
+    padding: 5px 12px;
+    text-decoration: none;
+}
+
+header a:hover{
+    color: rgb(211, 43, 226);
+    text-shadow: 2px 2px 10px black;
+}
+
+button{
+    width: auto;
+    font-size: 1em;
+    padding: 10px 30px;
+    background-color: rgba(201,0,255, 1);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-align: center;
+    border-radius: 35px;
+    border: 1px solid rgba(97, 32, 116, 0.3);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    max-width: fit-content;
+    cursor: pointer;
+    transition: transform 0.2 ease-in-out;
+}
+
+button:hover{
+    background-color: rgba(144, 7, 182, 1);
+    transform: scale(1.05);
+}
+
+.bienvenido{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: linear-gradient(0deg,
+                     rgba(0,0,0,0.5),
+                     rgba(0,0,0,0.5)), 
+                     url("/Imagenes/Fondo-initial.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height: 80vh; */ /* La altura limita la visualización en pantalla, 
+                           es ideal colocarla para modificar cuando sea pantalla completa */
+    padding: 80px 30px;
+    padding-top: auto;
+    align-items: center;
+}
+
+.bienvenido h1{
+    color: white;
+    font-size: 1.8em;
+    text-shadow: 2px 2px 10px rgba(119, 119, 119, 0.5);
+    text-align: center;
+    margin: 10px;
+}
+
+.bienvenido p{
+    color: white;
+    text-shadow: 2px 2px 10px rgba(119, 119, 119, 0.5);
+    text-align: center;
+    margin-top: 10px;
+}
+
+.bienvenido a{
+    text-decoration: none;
+    color: white;
+    font-size: bold;
+}
+
+.bienvenido button{
+    min-width: 160px;
+}
+
+footer .container{
+    display: flex;
+    height: auto;
+    justify-content: space-between;
+    align-items: end;
+    max-height: 80px; 
+    overflow: hidden;
+    padding: 0 10px;
+}
+
+footer p{
+    color: rgb(107, 107, 107);
+    font-size: 0.8em;
+}
+
+.catalogo .name-plataforma{
+    background-color: rgb(32, 195, 236);
+    box-shadow: 1px 1px 5px solid rgba(0, 0, 0, 0.26);
+    margin-top: 0px;
+    height: 28px;
+    color: white;
+}
+
+.catalogo .logo-plataforma{
+    height: 60%;
+    width: 60%;
+}
+
+.animated-text { /* Generar animación en texto de nickname */
+    font-weight: bold;
+    text-align: center;
+    animation: colorShift 5s infinite alternate;
+    transition: color 0.3s ease-in-out;
+}
+
+@keyframes colorShift {
+    0%   { color: #0000FF; } /* Azul puro */
+    20%  { color: #1E90FF; } /* Azul Dodger */
+    40%  { color: #00BFFF; } /* Azul profundo */
+    60%  { color: #87CEEB; } /* Azul cielo */
+    80%  { color: #4682B4; } /* Azul acero */
+    100% { color: #5F9EA0; } /* Azul cadete */
+}
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #25D366;
+    /* background-color: rgba(201,0,255, 1); */
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-size: 30px;
+    transition: transform 0.2 ease-in-out;
+    cursor: pointer;
+}
+
+.whatsapp-button:hover {
+    background-color: #1ca955;
+    transform: scale(1.07);
+}
+
+#contenedor-principal-formulario-registro{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    background-color: #ffffff;
+}
+
+.contenedor-formulario-registro{
+    padding: 15px;
+}
+
+.contenedor-formulario-registro h2{
+    text-align: center;
+    color: rgba(201,0,255, 1);
+    font-size: 2.2em;
+    font-weight: bold;
+    /* text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4); */
+}
+
+.contenedor-formulario-inputs input, select{
+    width: 100%;
+    padding: 7px;
+    margin-top: 2px;
+    border-radius: 10px;
+    border: 1px solid rgba(201,0,255, 1);
+    color: rgba(201,0,255, 1);
+}
+
+.contenedor-formulario-inputs input:focus, .contenedor-formulario-inputs select:focus{
+    background-color: rgb(241, 228, 246);
+    border: none;
+    border: 1px solid rgba(200, 0, 255, 0.659);
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.contenedor-formulario-inputs input:hover, .contenedor-formulario-inputs select:hover{
+    background-color: rgb(241, 228, 246);
+    transition: all 0.2s ease-in-out;
+}
+
+.contenedor-formulario-inputs input::placeholder{
+    color: rgba(201,0,255, 1);
+    padding-left: 5px;
+}
+
+.contenedor-formulario-inputs button{
+    display: block;
+    margin: 10px auto;
+    padding-right: 80px;
+    padding-left: 80px;
+}
+
+.sub-titulos{
+    font-weight: bold;
+    color: #0000FF;
+}
+
+.catalogo{
+    display: flex;
+    flex-wrap: wrap;  /* Permite que los elementos pasen a otra fila si no caben */
+    justify-content: space-between; /* Espaciado uniforme */
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.plataformas{
+    flex: 1 1 calc(33.33% - 10px);
+    background: #f4f4f4;
+    margin: 5px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px; /* Espacio entre filas */
+    overflow: hidden; /* Oculta contenido que se desborda */
+    word-wrap: break-word; /* No permite desbordamiento */
+}
+
+
+.plataformas:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    z-index: 10; /* Asegura que la tarjeta sobresalga por si se cruza con otra */
+}
+
+.plataformas h3{
+    margin-top: 3px;
+    padding-bottom: 10px;
+    overflow: hidden;
+}
+
+
+/* PRUEBA DE BOTON */
+.selector-pantallas {
+    display: none;
+    align-items: center;
+    gap: 5px;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    justify-content: center;
+}
+
+.selector-pantallas button {
+    color: white;
+    border: none;
+    padding: 1px 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50px;
+}
+
+.selector-pantallas input {
+    width: 30%;
+    text-align: right;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/*  */
+
+#control-button{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2em;
+    margin-top: 20px;
+    margin-bottom: -10px;
+    text-align: center;
+    gap: 10px;
+}
+
+#Quienes-somos{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(240, 240, 240);
+    text-align: center;
+    padding: 50px 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+#Quienes-somos h2{
+    color: blue;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgb(122, 122, 122);
+    text-align: center;
+}
+
+#Quienes-somos .container{
+    /* padding: 15px 20px; */
+    align-items: center;
+    height: auto;
+}
+
+#Quienes-somos .logofull{
+    width: 50%;
+    height: auto;
+    background-position: center center;
+}
+
+#Quienes-somos .fondo-container-how{
+    background-size: cover;
+}
+
+#Quienes-somos p{
+    padding: 0px 10px;
+    text-align: justify;
+    color: black;
+}
+
+#ser-distribuidor{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(240, 240, 240);
+    text-align: center;
+    padding: 50px 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+#ser-distribuidor h2{
+    color: blue;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgb(122, 122, 122);
+    text-align: center;
+}
+
+#ser-distribuidor .container{
+    /* padding: 15px 20px; */
+    align-items: center;
+    height: auto;
+}
+
+#ser-distribuidor .logoCat{
+    width: 50%;
+    height: auto;
+    background-position: center center;
+}
+
+#ser-distribuidor .fondo-container-ser{
+    background-size: cover;
+}
+
+#ser-distribuidor p{
+    padding: 0px 10px;
+    text-align: justify;
+    color: black;
+    padding-bottom: 20px;
+}
+
+#nuestros-servicios{
+    background-color: rgb(240, 240, 240);
+    text-align: center;
+    padding-top: 20px;
+}
+
+#nuestros-servicios .container{
+    background-color: rgba(185, 37, 37, 0);
+    width: 90%;
+}
+
+#button-buy, #btn-info-platform{
+    margin-bottom: 5px;
+    box-shadow: 1px 1px 1px solid rgba(0, 0, 0, 0.158);
+    padding: 7px 20px;
+    min-width: 120px;
+}
+
+#btn-info-platform{
+    margin-bottom: 15px;
+}
+
+
+#value-plataform{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+
+}
+
+#nuestros-servicios h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;  /* Fuente más estilizada */
+    font-weight: 700;
+    font-size: 1.3em;  /* Tamaño ligeramente mayor */
+    width: 90%;
+    margin: 0 auto;
+    height: 55px;  /* Espaciado más cómodo */
+    padding: 10px 20px;
+    border: 2px solid rgba(44, 18, 192, 0.5);  /* Borde más definido */
+    border-radius: 15px; 
+    margin-bottom: 20px;
+    
+    /* Fondo con degradado */
+    background: linear-gradient(90deg, #4B0082, #0000FF);
+    color: white;  /* Texto en blanco */
+    
+    /* Sombra de texto para mejor legibilidad */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Estilos generales */
+#carrito {
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* <-- ESTA LÍNEA DA EL SOMBREADO */
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Título */
+#carrito h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: rgb(132, 12, 165);
+    text-transform: uppercase;
+}
+
+/* Ítems del carrito */
+.item-carrito {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 1fr 0.5fr;
+    align-items: center; /* Centra verticalmente todos los elementos */
+    gap: 10px;
+    background: #f8f8f8;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    min-height: 60px; /* Asegura que todos los elementos tengan la misma altura */
+}
+
+.controles {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espaciado entre botones */
+    justify-content: center; /* Centra los botones horizontalmente */
+}
+
+.precio {
+    flex: 1;
+    text-align: right;
+}
+
+
+.nombre-servicio {
+    font-weight: bold;
+    flex: 2; /* Ocupa más espacio */
+}
+
+/* Nombre del producto */
+.item-carrito p{
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Botones */
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 50px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Botones de incrementar y decrementar */
+.incrementar, .decrementar {
+    background: #9f00ee;
+    color: white;
+    font-weight: bold;
+    padding: 8px 10px;
+    font-size: 0.8em;
+    min-width: 30px;
+}
+
+.incrementar:hover, .decrementar:hover {
+    background: #8a2be2;
+}
+
+/* Botón eliminar */
+.eliminar-item, .eliminar-combo {
+    background: #ee00006c;
+    color: white;
+    font-size: 0.5em;
+}
+
+.eliminar-item:hover {
+    background: #cc0000;
+}
+
+/* Total */
+#totalCarrito {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+}
+
+/* Botón vaciar carrito */
+#vaciarCarrito, #comprarCarrito {
+    background: #6a0dad;
+    color: white;
+    width: 100%;
+    margin-top: 15px;
+}
+
+#vaciarCarrito:hover {
+    background: #8a2be2;
+}
+
+#mensajeAgregado {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: none;
+    z-index: 1000;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+#importanteMensaje{
+    color: red;
+    font-style: italic;
+}
+
+#importante_subrayado{
+    text-decoration: underline;
+}
+
+.logo-plataforma{
+    margin-bottom: -7px;
+}
+
+@media (width >= 850px){
+    header{
+        position: fixed; /* Hace que el header siempre se mantenga visible mientras se baja con el scroll - Se fija la información del header en la pagina */
+        width: 100%; /* Ocupará el header todo el ancho */
+        margin: 0;
+        padding: 0px 20px;
+        /* padding-top: 0; */ /* Reducir espacio ocupado superior */
+        /* padding-bottom: 0; */ /* Reducir espacio ocupado inferior */
+    }
+
+    header .container{ /* El contenedor que tiene el logo e info */
+        flex-direction: row; /* Cambiar orientación a filas */
+        justify-content: space-between; /* Justificar el contenido que quede espaciado entre logo y nav (ubicación esquina - esquina) */
+        padding: 0px;
+        height: 80px;
+    }
+
+    header nav{ /* estilo al nav */
+        flex-direction: row; /* Cambia orientación a fila (viene de arriba en columna) */
+        padding-bottom: 0; /* reduce el espacio del padding a 0 (trae un 25px de abajo de lo declarado en el header nav)*/
+    }
+
+    header .textlogo{
+        padding-top: 5px;
+    }
+
+    #Quienes-somos{
+        padding: 50px 50px;
+        /* height: 50vh; */
+    }
+
+    #Quienes-somos .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #Quienes-somos .fondo-container-how{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background-size: cover;
+    }
+
+    #Quienes-somos .logofull{
+        width: 50%;
+        min-width: 350px;
+        height: auto;
+        padding-left: 60px;
+        padding-top: 20px;
+    }
+
+    #Quienes-somos p{
+        padding: 0px 60px;
+        text-align: justify;
+    }
+
+    .bienvenido{
+        height: 100vh;
+    }
+
+    .bienvenido h1{
+        color: white;
+        text-shadow: 2px 2px 10px rgba(119, 119, 119, 0.5);
+        text-align: center;
+        font-size: 3.5em;
+        padding-top: 30px;
+    }
+
+    .bienvenido p{
+        font-size: 1.1em;
+    }
+
+    .bienvenido button{
+        min-width: 190px;
+    }
+
+    .contenedor-formulario-inputs form{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);   
+        width: 100vh;
+        gap: 1px;
+    }
+
+    #control-button{
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px;
+        gap: 10px;
+        text-align: center;
+        font-size: 1.5em;
+    }
+
+    #nuestros-servicios{
+        padding-top: 100px;
+    }
+
+    .plataformas{
+        flex: 1 1 calc(25% - 20px); /* 25% para que sean 4 por fila, restando márgenes */
+        margin: 10px; /* Espaciado entre tarjetas */
+        max-width: calc(25% - 20px); /* Evita que ocupen más de lo necesario */
+    }
+
+    #nuestros-servicios .container{ /* COLOR DE PRUEBA DE FUNCIONAMIENTO */
+        background-color: rgba(185, 37, 37, 0);
+        max-width: 70%;
+    }
+
+    #nuestros-servicios h2{
+        font-size: 1.8em;
+        max-width: 69%;
+        border-radius: 15px;
+        margin: 0 auto;
+    }
+
+    #button-buy{
+       padding: 10px 30px;
+    }
+
+    #value-plataform{
+        font-size: 1.2em;
+    }
+}
+

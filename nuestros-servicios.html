@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streaming Spartan</title>
+    <link rel="icon" href="Imagenes/Spartan logo with cat.png"> <!-- Asignar icono al title de la pagina "texto en pestaña" -->
+    <link rel="stylesheet" href="Style - SP/Styles-Base.css">
+    <script src="/navbar/navbar.js" defer></script>
+    <script src="/script/myscripts.js" defer></script>
+    <script src="script/carrito-compras.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="container"></div>
+    </header>
+    
+    <section id="nuestros-servicios">
+        <h2>🔱 Catalogo de plataformas 🔱</h2>
+        <div class="catalogo container">
+            <div class="plataformas">
+                <h3 class="name-plataforma" style="background-color: red;">NETFLIX</h3>
+                <p><img src="/Imagenes/logos-plataformas/NETFLIX-LOGO.png" alt="NETFLIX" class="logo-plataforma"></p>
+                <p id="value-plataform">$14000 COP</p>
+                
+                <div class="selector-pantallas">
+                    <button class="btn-menor" onclick="cambiarPantallas(this, -1)" style="background-color: red;">-</button>
+                    <input type="number" value="1" min="1" class="pantallas" readonly>
+                    <button class="btn-mayor" onclick="cambiarPantallas(this, 1)" style="background-color: red;">+</button>
+                </div>
+
+                <button id="button-buy" style="background-color: red;" onclick="toggleSelector(this)">Comprar</button>
+                <button id="btn-info-platform" style="background-color: red;">+Info</button>
+            </div>
+
+            <div class="plataformas">
+                <h3 class="name-plataforma" style="background-color: rgb(18, 18, 119);">DISNEY PLUS</h3>
+                <p><img src="/Imagenes/logos-plataformas/DISNEY-LOGO.png" alt="DISNEY" class="logo-plataforma"></p>
+                <p id="value-plataform">$11000 COP</p>
+
+                <div class="selector-pantallas">
+                    <button class="btn-menor" onclick="cambiarPantallas(this, -1)" style="background-color: rgb(18, 18, 119);">-</button>
+                    <input type="number" value="1" min="1" class="pantallas" readonly>
+                    <button class="btn-mayor" onclick="cambiarPantallas(this, 1)" style="background-color: rgb(18, 18, 119);">+</button>
+                </div>
+
+                <button id="button-buy" style="background-color: rgb(18, 18, 119);" onclick="toggleSelector(this)">Comprar</button>
+                <button id="btn-info-platform" style="background-color: rgb(18, 18, 119);">+Info</button>
+            </div>
+
+            <div class="plataformas">
+                <h3 class="name-plataforma" style="background-color: rgb(0, 110, 255);">PRIME VIDEO</h3>
+                <p><img src="/Imagenes/logos-plataformas/PRIMEVIDEO-LOGO.png" alt="PRIME VIDEO" class="logo-plataforma"></p>
+                <p id="value-plataform">$6000 COP</p>
+
+                <div class="selector-pantallas">
+                    <button class="btn-menor" onclick="cambiarPantallas(this, -1)" style="background-color: rgb(0, 110, 255);">-</button>
+                    <input type="number" value="1" min="1" class="pantallas" readonly>
+                    <button class="btn-mayor" onclick="cambiarPantallas(this, 1)" style="background-color: rgb(0, 110, 255);">+</button>
+                </div>
+
+                <button id="button-buy" style="background-color: rgb(0, 110, 255);" onclick="toggleSelector(this)">Comprar</button>
+                <button id="btn-info-platform" style="background-color: rgb(0, 110, 255);">+Info</button>
+            </div>
+
+            <div class="plataformas">
+                <h3 class="name-plataforma" style="background-color: blue;">MAX</h3>
+                <p><img src="/Imagenes/logos-plataformas/MAX-LOGO.png" alt="MAX" class="logo-plataforma"></p>
+                <p id="value-plataform">$6000 COP</p>
+
+                <div class="selector-pantallas">
+                    <button class="btn-menor" onclick="cambiarPantallas(this, -1)" style="background-color: blue;">-</button>
+                    <input type="number" value="1" min="1" class="pantallas" readonly>
+                    <button class="btn-mayor" onclick="cambiarPantallas(this, 1)" style="background-color: blue;">+</button>
+                </div>
+
+                <button id="button-buy" style="background-color: blue;" onclick="toggleSelector(this)">Comprar</button>
+                <button id="btn-info-platform" style="background-color: blue;">+Info</button>
+            </div>
+            
+            <div class="plataformas">
+                <h3 class="name-plataforma" style="background-color: rgb(0, 89, 255);">PARAMOUNT PLUS</h3>
+                <p><img src="/Imagenes/logos-plataformas/PARAMOUNT-LOGO.png" alt="PARAMOUNT+" class="logo-plataforma"></p>
+                <p id="value-plataform">$6000 COP</p>
+
+                <div class="selector-pantallas">
+                    <button class="btn-menor" onclick="cambiarPantallas(this, -1)" style="background-color: rgb(0, 89, 255);">-</button>
+                    <input type="number" value="1" min="1" class="pantallas" readonly>
+                    <button class="btn-mayor" onclick="cambiarPantallas(this, 1)" style="background-color: rgb(0, 89, 255);">+</button>
+                </div>
+
+                <button id="button-buy" style="background-color: rgb(0, 89, 255);" onclick="toggleSelector(this)">Comprar</button>
+                <button id="btn-info-platform" style="background-color: rgb(0, 89, 255);">+Info</button>
+            </div>
+
+            <div class="plataformas">
+                <h3 class="name-plataforma" style="background-color: rgb(255, 123, 0);">CRUNCHYROLL</h3>
+                <p><img src="/Imagenes/logos-plataformas/CRUNCHYROLL-LOGO.png" alt="CRUNCHYROLL" class="logo-plataforma"></p>
+                <p id="value-plataform">$6000 COP</p>
+
+                <div class="selector-pantallas">
+                    <button class="btn-menor" onclick="cambiarPantallas(this, -1)" style="background-color: rgb(255, 123, 0);">-</button>
+                    <input type="number" value="1" min="1" class="pantallas" readonly>
+                    <button class="btn-mayor" onclick="cambiarPantallas(this, 1)" style="background-color: rgb(255, 123, 0);">+</button>
+                </div>
+
+                <button id="button-buy" style="background-color: rgb(255, 123, 0);" onclick="toggleSelector(this)">Comprar</button>
+                <button id="btn-info-platform" style="background-color: rgb(255, 123, 0);">+Info</button>
+            </div>
+
+            <div class="plataformas">
+                <h3 class="name-plataforma" style="background-color: rgb(255, 102, 0);">VIX</h3>
+                <p><img src="/Imagenes/logos-plataformas/VIX-LOGO.png" alt="VIX" class="logo-plataforma"></p>
+                <p id="value-plataform">$6000 COP</p>
+
+                <div class="selector-pantallas">
+                    <button class="btn-menor" onclick="cambiarPantallas(this, -1)" style="background-color: rgb(255, 102, 0);">-</button>
+                    <input type="number" value="1" min="1" class="pantallas" readonly>
+                    <button class="btn-mayor" onclick="cambiarPantallas(this, 1)" style="background-color: rgb(255, 102, 0);">+</button>
+                </div>
+
+                <button id="button-buy" style="background-color: rgb(255, 102, 0);" onclick="toggleSelector(this)">Comprar</button>
+                <button id="btn-info-platform" style="background-color: rgb(255, 102, 0);">+Info</button>
+            </div>
+
+            <div class="plataformas">
+                <h3 class="name-plataforma" style="background-color: rgb(86, 86, 206);">CANVA</h3>
+                <p><img src="/Imagenes/logos-plataformas/CANVA-LOGO.png" alt="CANVA" class="logo-plataforma"></p>
+                <p id="value-plataform">$9000 COP</p>
+
+                <div class="selector-pantallas">
+                    <button class="btn-menor" onclick="cambiarPantallas(this, -1)" style="background-color: rgb(86, 86, 206);">-</button>
+                    <input type="number" value="1" min="1" class="pantallas" readonly>
+                    <button class="btn-mayor" onclick="cambiarPantallas(this, 1)" style="background-color: rgb(86, 86, 206);">+</button>
+                </div>
+
+                <button id="button-buy" style="background-color: rgb(86, 86, 206);" onclick="toggleSelector(this)">Comprar</button>
+                <button id="btn-info-platform" style="background-color: rgb(86, 86, 206);">+Info</button>
+            </div>
+
+            <div class="plataformas">
+                <h3 class="name-plataforma" style="background-color: rgb(14, 197, 29);">SPOTIFY</h3>
+                <p><img src="/Imagenes/logos-plataformas/SPOTIFY-LOGO.png" alt="SPOTIFY" class="logo-plataforma"></p>
+                <p id="value-plataform">$8000 COP</p>
+
+                <div class="selector-pantallas">
+                    <button class="btn-menor" onclick="cambiarPantallas(this, -1)" style="background-color: rgb(86, 86, 206);">-</button>
+                    <input type="number" value="1" min="1" class="pantallas" readonly>
+                    <button class="btn-mayor" onclick="cambiarPantallas(this, 1)" style="background-color: rgb(86, 86, 206);">+</button>
+                </div>
+
+                <button id="button-buy" style="background-color: rgb(14, 197, 29);" onclick="toggleSelector(this)">Comprar</button>
+                <button id="btn-info-platform" style="background-color: rgb(14, 197, 29);">+Info</button>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Carrito de compras -->
+    <section id="carrito" class="oculto">
+        <h2>Carrito de Compras 🛒</h2>
+        <div id="listaCarrito"></div>
+        <h3>Total: <span id="totalCarrito">0</span> COP</h3>
+        <div class="controles">
+            <button id="comprarCarrito">Comprar Carrito</button>
+            <button id="vaciarCarrito">Vaciar Carrito</button>
+        </div>
+        <p id="importanteMensaje"><span id="importante_subrayado">Importante</span>: Si tienes una duda, puedes contactarnos a través de nuestro WhatsApp.</p>
+    </section>
+
+    <div id="mensajeAgregado">Producto agregado al carrito de compras con exito!</div>
+
+    <footer>
+        <div class="container">
+            <p>Design by: <span class="animated-text">Mr. Greek</span></p>
+            <p>&copy; Copyright: Streaming Spartan 2025</p>
+        </div>
+    </footer>
+
+    <a href="https://api.whatsapp.com/send?phone=573207685459&text=%20¡Hola!%20Quisiera%20información%20sobre%20las%20plataformas%20de%20streaming%20disponibles.%20¿Podrías%20darme%20más%20detalles? 😊" target="_blank" class="whatsapp-button">
+        <img src="Imagenes/logos/WPP - WHITE.png" alt="WhatsApp" width="40" height="40"></a>  
+
+</body>
+</html>
